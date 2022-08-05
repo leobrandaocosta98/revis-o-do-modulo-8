@@ -26,10 +26,10 @@
             Esquema do Cenário: Autenticar multiplos usuários
             Quando eu digitar o <usuario>
             E a <senha>
-            Então deve exibir a <mensagem> de sucesso
+            Então deve exibir uma <mensagem> ao cliente
 
             Exemplos:
-            | usuario                 | senha           | mensagem                     |
-            | "leonardo@ebac.com.br"  | "leonardo@123"  | "checkout"                   |
+            | usuario                 | senha           | mensagem            |
+            | "leonardo@ebac.com.br"  | "leonardo@123"  | "checkout"          |
             | "xxxyyyzzz@ebac.com.br" | "leonardo@123"  | "Usuário inválidos" |
-            | "leonardo@ebac.com.br"  | "fjdefhsd43435" | "Senha inválidos" |
+            | "leonardo@ebac.com.br"  | "fjdefhsd43435" | "Senha inválidos"   |

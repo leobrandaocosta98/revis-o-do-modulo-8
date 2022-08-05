@@ -8,32 +8,22 @@
             Contexto:
             Dado que eu acesse a página de cadastro do usuário na EBAC SHOP
 
-            Cenário: E-mail válido
-            Quando eu digitar o "e-mail"
-            E for "e-mail" válido
-            Então deve aparecer uma mensagem de "e-mail válido"
+            Cenário: Cadastro concluído
+            Quando eu digitar "Léo","leo@ebac.com","11996211371" e "outro dado"
+            Então deve aparecer uma mensagem de "Cadastro efetuado com sucesso"
 
-            Cenário: Cadastro com e-mail não verificado
-            Quando eu digitar um "e-mail" inválido
-            Então deve aparecer uma mensagem de "e-mail inválido"
+            Cenário: Cadastro incorreto
+            Quando eu digitar "Léo","leo!ebac","11996211371" e "outro dado"
+            Então deve aparecer uma mensagem de "Favor preencher os campos corretamente"
 
-            Cenário: Cadastro válido
-            Quando eu digitar todos os "campos" com asterisco
-            E um "e-mail" válido
-            Então deve aparecer uma mensagem de "cadastro válido"
-
-            Cenário: Cadastro com campos com asterisco em branco
-            Quando eu não digitar todos os "campos" com asterisco
-            Então deve aparecer uma mensagem de "campo em branco"
-
-            Esquema do Cenário: Autenticar multiplos usuários
-            Quando eu digitar os <campos> com asterisco
-            E um <e-mail>
-            Então deve exibir a <mensagem> de sucesso
+            Esquema do Cenário: Autenticar multiplos cadastros
+            Quando Quando eu digitar os campos <nome>, <email>, <telefone>, <etc>
+            Então deve aparecer a <mensagem>
 
             Exemplos:
-            | campos                 | e-mail              | mensagem          |
-            | "todos preenchido"     | "leonardo@ebac.com" | "cadastro válido" |
-            | "ainda não preenchido" | "leonardo@ebac.cm"  | "e-mail inválido" |
-            | "ainda não preenchido" | "leonardo@ebac.com" | "e-mail válido"   |
-            | "campo em branco"      | "leonardo@ebac.com" | "campo em branco" |
+            | nome  | email          | telefone      | etc          | mensagem                                 |
+            | "Léo" | "leo@ebac.com" | "11996211371" | "outro dado" | "Cadastro efetuado com sucesso"          |
+            | "Léo" | "leo!ebac"     | "11996211371" | "outro dado" | "Favor preencher os campos corretamente" |
+            | "  "  | "leo@ebac.com" | "11996211371" | "outro dado" | "Favor preencher os campos corretamente" |
+            | "Léo" | "leo@ebac.com" | "  "          | "outro dado" | "Favor preencher os campos corretamente" |
+            | "Léo" | "leo@ebac.com" | "11996211371" | "   "        | "Favor preencher os campos corretamente" |

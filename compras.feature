@@ -23,12 +23,12 @@
             Então deve aparecer "Quantidade superior ao permitido"
 
             Cenário: Apertar o botão Limpar e tiver prooduto no carrinho
-            Quando eu acionar o botão "Limpar"
+            Quando eu "apertar o botão de Limpar"
             E tiver produto escolhido
             Então deve ser aparecer uma mensagem de "carrinho limpo"
 
             Cenário: Apertar o botão Limpar e não tiver produto no carrinho
-            Quando eu acionar o botão "Limpar"
+            Quando eu "apertar o botão de Limpar"
             E não tiver produto escolhido
             Então deve ser aparecer uma mensagem de "carrinho sem produto"
 
@@ -48,12 +48,12 @@
                  
             Esquema do Cenário: Autenticar botão de Limpar
             Quando eu tiver produto no <carrinho>
-            E apertar botão <Limpar>
-            Então deve exibir a <mensagem> de sucesso
+            E apertar botão Limpar
+            Então deve exibir a <mensagem> de aviso
 
             Exemplos:
 
             | Limpar                     | carrinho      | mensagem               |
-            | "apertado botão de Limpar" | "10 produtos" | "carrinho limpo"       |
-            | "apertado botão de Limpar" | "0 produto"   | "carrinho sem produto" |
+            | "apertar o botão de Limpar" | "10 produtos" | "carrinho limpo"       |
+            | "apertar o botão de Limpar" | "0 produto"   | "carrinho sem produto" |
 
